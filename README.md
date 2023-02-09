@@ -11,6 +11,10 @@ While working on this project I learned how to:
 * Create private routes in react-router using custom hooks. 
 * Build a beautiful user interface through mobile-first design.
 
+## Demo
+
+[Click here to visit the marketplace](https://bike-sale.vercel.app/).
+
 ## Dependencies & Packages
 
 * [Firebase SDK](https://firebase.google.com/) 
@@ -19,10 +23,6 @@ While working on this project I learned how to:
 * [React Leaflet](https://react-leaflet.js.org/) 
 * [React Toastify](https://www.npmjs.com/package/react-toastify)
 * [React Router](https://www.npmjs.com/package/react-router-dom)
-
-## Demo
-
-[Click here to visit the marketplace](https://bike-sale.vercel.app/).
 
 ## Roadmap
 
