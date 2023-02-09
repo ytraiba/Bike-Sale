@@ -386,6 +386,11 @@ button {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 600px){
+  ul.listingsList{
+    padding-inline-start: 0px;
+  }
+}
 
 .exploreCategoryImg {
   min-height: 115px;
