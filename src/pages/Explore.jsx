@@ -4,14 +4,12 @@ import roadCategoryImage from '../assets/jpg/roadCategoryImage.jpeg'
 import hardtailCategoryImage from '../assets/jpg/hardtailCategoryImage.jpeg'
 import fullCategoryImage from '../assets/jpg/fullCategoryImage.jpeg'
 
-
 function Explore() {
   return (
     <div className='explore'>
       <header>
         <p className='pageHeader'>Explore</p>
       </header>
-
       <main>
         <Slider />
 
