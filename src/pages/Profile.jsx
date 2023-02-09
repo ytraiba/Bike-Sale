@@ -7,7 +7,7 @@ import { db } from "../firebase.config"
 import { toast } from "react-toastify"
 import ListingItem from '../components/ListingItem'
 import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg'
-import homeIcon from '../assets/svg/homeIcon.svg'
+import bikeIcon from '../assets/svg/bikeIcon.svg'
 import Spinner from "../components/Spinner"
 
 function Profile() {
@@ -136,8 +136,8 @@ function Profile() {
         </div>
 
         <Link to='/create-listing' className='createListing'>
-          <img src={homeIcon} alt='home' />
-          <p>Sell or rent your home</p>
+          <img src={bikeIcon} alt='home' />
+          <p>Create A New Listing</p>
           <img src={arrowRight} alt='arrow right' />
         </Link>
 

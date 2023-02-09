@@ -50,8 +50,9 @@ function Offers() {
       <div className='category'>
       <header>
         <p className='pageHeader'>
-          Special  Offers
+          Special  Offers 
         </p>
+        (Must rent for 7 day or more)
       </header>
 
       {loading ? (
@@ -72,11 +73,6 @@ function Offers() {
 
           <br />
           <br />
-          {/* {lastFetchedListing && (
-            <p className='loadMore' onClick={onFetchMoreListings}>
-              Load More
-            </p>
-          )} */}
         </>
       ) : (
         <p>No Special Offers</p>

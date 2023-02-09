@@ -46,7 +46,7 @@ function Listing() {
           
           {listing.imgUrls.map((imgUrl, index) => (
             <SwiperSlide key={index}>
-              <div className='swiperSlideDiv' style={{background: `url(${imgUrl}) center no-repeat`, height: '250px', backgroundSize: 'fill'}} >
+              <div className='swiperSlideDiv' style={{background: `url(${imgUrl}) center no-repeat`, height: '250px', backgroundSize: 'contain'}} >
               </div>
             </SwiperSlide>
           ))}
@@ -69,11 +69,7 @@ function Listing() {
       <div className='listingDetails'>
         <p className='listingName'>
           {listing.name} - $
-          {listing.offer
-            ? listing.discountedPrice
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-            : listing.regularPrice
+          {listing.regularPrice
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ',')} per day
         </p>
@@ -83,7 +79,7 @@ function Listing() {
         </p>
         {listing.offer && (
           <p className='discountPrice'>
-            ${listing.regularPrice - listing.discountedPrice} discount
+            ${listing.regularPrice - listing.discountedPrice} discount / day (more than 6 days)
           </p>
         )}
 

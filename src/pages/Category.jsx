@@ -50,7 +50,7 @@ function Category() {
       <div className='category'>
       <header>
         <p className='pageHeader'>
-          Bikes for {params.categoryName}
+          {params.categoryName} bikes for rent
         </p>
       </header>
 
@@ -72,11 +72,6 @@ function Category() {
 
           <br />
           <br />
-          {/* {lastFetchedListing && (
-            <p className='loadMore' onClick={onFetchMoreListings}>
-              Load More
-            </p>
-          )} */}
         </>
       ) : (
         <p>No listings for {params.categoryName}</p>

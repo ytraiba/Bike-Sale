@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import Slider from '../components/Slider'
-import rentCategoryImage from '../assets/jpg/rentCategoryImage.png'
-import sellCategoryImage from '../assets/jpg/sellCategoryImage.png'
+import roadCategoryImage from '../assets/jpg/roadCategoryImage.jpeg'
+import hardtailCategoryImage from '../assets/jpg/hardtailCategoryImage.jpeg'
+import fullCategoryImage from '../assets/jpg/fullCategoryImage.jpeg'
 
 
 function Explore() {
@@ -16,21 +17,29 @@ function Explore() {
 
         <p className='exploreCategoryHeading'>Categories</p>
         <div className='exploreCategories'>
-          <Link to='/category/rent'>
+          <Link to='/category/Full-Suspension'>
             <img
-              src={rentCategoryImage}
-              alt='rent'
+              src={fullCategoryImage}
+              alt='Full-Suspension'
               className='exploreCategoryImg'
             />
-            <p className='exploreCategoryName'>Bikes for rent</p>
+            <p className='exploreCategoryName'>Full-Suspension Bikes</p>
           </Link>
-          <Link to='/category/sale'>
+          <Link to='/category/Hardtail'>
             <img
-              src={sellCategoryImage}
-              alt='sell'
+              src={hardtailCategoryImage}
+              alt='Hardtail'
               className='exploreCategoryImg'
             />
-            <p className='exploreCategoryName'>Bikes for sale</p>
+            <p className='exploreCategoryName'>Hardtail Bikes</p>
+          </Link>
+          <Link to='/category/Road'>
+            <img
+              src={roadCategoryImage}
+              alt='Road'
+              className='exploreCategoryImg'
+            />
+            <p className='exploreCategoryName'>Road Bikes</p>
           </Link>
         </div>
       </main>

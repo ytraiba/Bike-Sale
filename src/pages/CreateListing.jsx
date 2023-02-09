@@ -22,7 +22,6 @@ function CreateListing() {
     address: '',
     wheelSize: '26',
     frameSize: 'XL',
-    fullSuspension: false,
     images: [],
     latitude: 0,
     longitude: 0,
@@ -34,7 +33,6 @@ function CreateListing() {
         discountedPrice, 
         address, 
         wheelSize, 
-        fullSuspension, 
         frameSize,
         images, 
         latitude, 
@@ -64,8 +62,11 @@ function CreateListing() {
   const onSubmit = async (e) => {
     e.preventDefault()
 
+
     setLoading(true)
-    if (discountedPrice > regularPrice) {
+    const discPrice = Number(discountedPrice)
+    const regPrice = Number(regularPrice)
+    if (discPrice > regPrice) {
         toast.error('Discounted Price cannot be higher than Regular Price')
         setLoading(false)
         return
@@ -179,25 +180,34 @@ function CreateListing() {
 
       <main>
         <form onSubmit={onSubmit}>
-          <label className='formLabel'>Sell / Rent</label>
+          <label className='formLabel'>Type of Bike</label>
           <div className='formButtons'>
             <button
               type='button'
-              className={type === 'sale' ? 'formButtonActive' : 'formButton'}
+              className={type === 'Full-Suspension' ? 'formButtonActive' : 'formButton'}
               id='type'
-              value='sale'
+              value='Full-Suspension'
               onClick={onMutate}
             >
-              Sell
+              Full-Suspension
             </button>
             <button
               type='button'
-              className={type === 'rent' ? 'formButtonActive' : 'formButton'}
+              className={type === 'Hardtail' ? 'formButtonActive' : 'formButton'}
               id='type'
-              value='rent'
+              value='Hardtail'
               onClick={onMutate}
             >
-              Rent
+              Hardtail
+            </button>
+            <button
+              type='button'
+              className={type === 'Road' ? 'formButtonActive' : 'formButton'}
+              id='type'
+              value='Road'
+              onClick={onMutate}
+            >
+              Road Bike
             </button>
           </div>
 
@@ -241,32 +251,6 @@ function CreateListing() {
               />
             </div>
           </div>
-
-          <label className='formLabel'>Parking spot</label>
-          <div className='formButtons'>
-            <button
-              className={fullSuspension ? 'formButtonActive' : 'formButton'}
-              type='button'
-              id='fullSuspension'
-              value={true}
-              onClick={onMutate}
-              min='1'
-              max='50'
-            >
-              Yes
-            </button>
-            <button
-              className={
-                !fullSuspension && fullSuspension !== null ? 'formButtonActive' : 'formButton'
-              }
-              type='button'
-              id='fullSuspension'
-              value={false}
-              onClick={onMutate}
-            >
-              No
-            </button>
-          </div>
           <label className='formLabel'>Address</label>
           <textarea
             className='formInputAddress'
@@ -304,7 +288,7 @@ function CreateListing() {
             </div>
           )}
 
-          <label className='formLabel'>Offer</label>
+          <label className='formLabel'>Offer (if renting for more than 1 week)</label>
           <div className='formButtons'>
             <button
               className={offer ? 'formButtonActive' : 'formButton'}
@@ -340,12 +324,13 @@ function CreateListing() {
               max='7500'
               required
             />
-            {type === 'rent' && <p className='formPriceText'>$ / Day</p>}
+            <p className='formPriceText'>$ / Day</p>
           </div>
 
           {offer && (
             <>
               <label className='formLabel'>Discounted Price</label>
+              <div className='formPriceDiv'>
               <input
                 className='formInputSmall'
                 type='number'
@@ -356,6 +341,8 @@ function CreateListing() {
                 max='7500'
                 required={offer}
               />
+              <p className='formPriceText'>$ / Day</p>
+              </div>
             </>
           )}
 

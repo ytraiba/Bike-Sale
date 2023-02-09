@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ReactComponent as DeleteIcon } from '../assets/svg/deleteIcon.svg'
 import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg'
-import bedIcon from '../assets/svg/bedIcon.svg'
-import bathtubIcon from '../assets/svg/bathtubIcon.svg'
 
 function ListingItem({ listing, id, onDelete, onEdit }) {
   return (
@@ -22,18 +20,8 @@ function ListingItem({ listing, id, onDelete, onEdit }) {
               : listing.regularPrice
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-            {listing.type === 'rent' && ' / Day'}
+              &nbsp;/ Day
           </p>
-          <div className='categoryListingInfoDiv'>
-            <img src={bedIcon} alt='bed' />
-            <p className='categoryListingInfoText'>
-              2 wheels
-            </p>
-            <img src={bathtubIcon} alt='bath' />
-            <p className='categoryListingInfoText'>
-              1 seat
-            </p>
-          </div>
         </div>
       </Link>
       {onDelete && (
