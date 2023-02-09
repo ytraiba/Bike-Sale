@@ -46,7 +46,7 @@ function Listing() {
           
           {listing.imgUrls.map((imgUrl, index) => (
             <SwiperSlide key={index}>
-              <div className='swiperSlideDiv' style={{background: `url(${imgUrl}) center no-repeat`, height: '250px', backgroundSize: 'contain'}} >
+              <div className='swiperSlideDiv' style={{background: `url(${imgUrl}) center no-repeat`, height: '45vh', backgroundSize: 'contain'}} >
               </div>
             </SwiperSlide>
           ))}
