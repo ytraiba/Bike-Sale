@@ -1,15 +1,7 @@
 # Bike-Sale Market Place 
 
-The goal of this project was to create a marketplace that allows users to rent out their bikes to eachother. Users can create an account with an email/password or through Google's user authentication. To create a new lisiting for your bike, go to the profile page, click 'create new listing, and fill in the necessary information. All of my websites scale down to mobile devices, including Bike-Sale.  
+The goal of this project was to create a marketplace that allows users to rent out their bikes to each other. Users can create an account with an email/password or through Google's user authentication. To create a new listing for your bike, go to the profile page, click 'create a new listing', and fill in the necessary information. All of my websites scale down to mobile devices, including Bike-Sale. I used Firebase to create/authenticate users and store listings in a database, utilized Google's geocoding API and react-leaflet to display geographic information, and created private routes in react-router using custom hooks. 
 
-## Lessons Learned
-
-While working on this project I learned how to:
-
-* Use Firebase to create/authenticate users and store listings in a database. 
-* Utilize Google's geocoding API and react-leaflet to display geographic information.
-* Create private routes in react-router using custom hooks. 
-* Build a beautiful user interface through mobile-first design.
 
 ## Demo
 
